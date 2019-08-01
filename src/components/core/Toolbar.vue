@@ -68,15 +68,15 @@
           </router-link>
           <v-card>
             <v-list dense>
-              <v-list-tile
+              <v-list-item
                 v-for="notification in notifications"
                 :key="notification"
                 @click="onClick"
               >
-                <v-list-tile-title
+                <v-list-item-title
                   v-text="notification"
                 />
-              </v-list-tile>
+              </v-list-item>
             </v-list>
           </v-card>
         </v-menu>
