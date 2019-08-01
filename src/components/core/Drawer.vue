@@ -15,7 +15,6 @@
       height="100%"
     >
       <v-layout
-        class="fill-height"
         tag="v-list"
         column
       >

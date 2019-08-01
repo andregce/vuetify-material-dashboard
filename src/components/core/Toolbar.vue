@@ -1,4 +1,4 @@
-<template>
+<template v-slot:activator="{ on }">
   <v-toolbar
     id="core-toolbar"
 
@@ -51,8 +51,7 @@
           offset-y
           transition="slide-y-transition">
           <router-link
-            v-ripple
-            slot="activator"
+            v-ripple v-on="on"
             class="toolbar-items"
             to="/notifications"
           >
@@ -100,6 +99,7 @@ import {
 
 export default {
   data: () => ({
+    on: '',
     notifications: [
       'Mike, John responded to your email',
       'You have 5 new tasks',

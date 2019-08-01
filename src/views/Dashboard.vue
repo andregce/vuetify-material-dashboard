@@ -1,4 +1,4 @@
-<template>
+<template v-slot:activator="{ on }">
   <v-container
     fill-height
     fluid
@@ -243,8 +243,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="success"
                         icon
@@ -256,8 +255,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="danger"
                         icon
@@ -284,8 +282,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="success"
                         icon
@@ -298,8 +295,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="danger"
                         icon>
@@ -324,8 +320,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="success"
                         icon
@@ -337,8 +332,7 @@
                     <v-tooltip
                       top
                       content-class="top">
-                      <v-btn
-                        slot="activator"
+                      <v-btn v-on="on"
                         class="v-btn--simple"
                         color="danger"
                         icon
@@ -363,6 +357,7 @@
 export default {
   data () {
     return {
+      on: '',
       dailySalesChart: {
         data: {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],

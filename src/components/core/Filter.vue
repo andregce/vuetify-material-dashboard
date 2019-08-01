@@ -1,4 +1,4 @@
-<template>
+<template v-slot:activator="{ on }">
   <v-menu
     :close-on-content-click="false"
     bottom
@@ -9,8 +9,7 @@
     offset-x
     transition="slide-y-transition"
   >
-    <v-btn
-      slot="activator"
+    <v-btn v-on="on"
       class="elevation-0"
       color="grey"
       dark
@@ -90,7 +89,7 @@
                   fab
                   icon
                   small
-                  round
+                  rounded
                 >
                   <v-icon>mdi-facebook</v-icon>
                 </v-btn>
@@ -100,7 +99,7 @@
                   fab
                   icon
                   small
-                  round
+                  rounded
                 >
                   <v-icon>mdi-twitter</v-icon>
                 </v-btn>
@@ -122,6 +121,7 @@ import {
 
 export default {
   data: () => ({
+    on: '',
     colors: [
       'primary',
       'info',
