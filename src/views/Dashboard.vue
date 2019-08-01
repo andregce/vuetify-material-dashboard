@@ -165,7 +165,7 @@
           <v-data-table
             :headers="headers"
             :items="items"
-            hide-actions
+            hide-default-footer
           >
             <template
               slot="headerCell"
