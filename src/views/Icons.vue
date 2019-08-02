@@ -1,4 +1,4 @@
-<template>
+<template v-slot:activator="{ on }">
   <v-container
     fill-height
     fluid
@@ -34,7 +34,7 @@
           <v-tooltip
             top
             content-class="top">
-            <v-icon slot="activator">
+            <v-icon v-on="on">
               {{ icon }}
             </v-icon>
             <span>{{ icon }}</span>
@@ -50,7 +50,7 @@
         color="success"
         href="https://materialdesignicons.com/"
         target="_blank"
-        round
+        rounded
       >
         <v-icon left>mdi-material-design</v-icon>
         <span>See all icons</span>
@@ -62,6 +62,7 @@
 <script>
 export default {
   data: () => ({
+    on: '',
     icons: [
       'mdi-access-point',
       'mdi-access-point-network',
